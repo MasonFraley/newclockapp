@@ -1,0 +1,25 @@
+body {
+    background-color: gray;
+    color: white;
+}
+
+.title {
+    font-size: 70px;
+    text-align: center;
+    padding: auto;
+}
+
+.clock-and-date {
+    font-size: 60px;
+    text-align: center;
+    padding: auto; 
+}
+
+.time {
+    font-size: 60px;
+}
+
+.date {
+    font-size: 60px;
+}
+
