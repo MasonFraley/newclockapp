@@ -63,6 +63,18 @@ function calendarDate() {
     }
     if (day == 3) {
         suffix = "rd"
+    } 
+    if (day == 21) {
+        suffix = "st"
+    }
+    if (day == 22) {
+        suffix = "nd"
+    }
+    if (day == 23) {
+        suffix = "rd"
+    }
+    if (day == 31) {
+        suffix = "st"
     } else {
         suffix = "th"
     }
