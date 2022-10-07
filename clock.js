@@ -52,6 +52,23 @@ function calendarDate() {
     document.getElementById("day").innerHTML = day
     document.getElementById("month").innerHTML = monthName2;
     document.getElementById("weekday").innerHTML = weekday2;
+
+    var suffix;
+
+    if (day == 1) {
+        suffix = "st"
+    }
+    if (day == 2) {
+        suffix = "nd"
+    }
+    if (day == 3) {
+        suffix = "rd"
+    } else {
+        suffix = "th"
+    }
+
+    document.getElementById("suffix").innerHTML = suffix
+
 }
 
 setInterval(clock, 10);
