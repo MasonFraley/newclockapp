@@ -5,7 +5,7 @@ function clock() {
     var hours = (hours%12) || 12;
     const minutes = today.getMinutes();
     const seconds = today.getSeconds();
-    const ampm = document.getElementById("ampm");
+    const ampm = today.getHours()
 
     document.getElementById("hours").innerHTML = leadingZeroHour();
     document.getElementById("minutes").innerHTML = leadingZeroMin();
@@ -21,13 +21,17 @@ function clock() {
 
     function leadingZeroHour() {
         return("0" + hours).slice(-2)
-    }    
+    } 
 
-    if (hours >= 12) {
-        ampm.innerHTML = "PM"
+    var ampm2;
+
+    if (ampm >= 12) {
+        ampm2 = "PM"    
     } else {
-        ampm.innerhtml = "AM";
+        ampm2 = "AM"
     }
+
+    document.getElementById("ampm").innerHTML = ampm2
 
 }
 
@@ -35,15 +39,25 @@ function calendarDate() {
     const newDay = new Date();
     const year = newDay.getFullYear();
     const month = newDay.getMonth();
-    const day = getDayByIndex(newDay.getDay());
+    const day = newDay.getDay();
+    
+    const weekday = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+    
+    const monthName = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+
+    const weekday2 = weekday[newDay.getDay()];
+    const monthName2 = monthName[newDay.getMonth()];
     
     document.getElementById("year").innerHTML = year;
-    document.getElementById("month").innerHTML = month;
-    document.getElementById("day").innerHTML = day;
+    document.getElementById("day").innerHTML = day
+    document.getElementById("month").innerHTML = monthName2;
+    document.getElementById("weekday").innerHTML = weekday2;
 }
 
 setInterval(clock, 10);
 clock();
+calendarDate();
+
 
 
 
