@@ -1,7 +1,8 @@
 
 function clock() {
     const today = new Date();
-    const hours = today.getHours();
+    var hours = today.getHours();
+    var hours = (hours%12) || 12;
     const minutes = today.getMinutes();
     const seconds = today.getSeconds();
     const ampm = document.getElementById("ampm");
@@ -20,7 +21,7 @@ function clock() {
 
     function leadingZeroHour() {
         return("0" + hours).slice(-2)
-    } 
+    }    
 
     if (hours >= 12) {
         ampm.innerHTML = "PM"
@@ -28,15 +29,13 @@ function clock() {
         ampm.innerhtml = "AM";
     }
 
-    if (hours > 12); {
-        hours = hours - 12;
-    }
 }
 
 function calendarDate() {
-    const year = today.getFullYear();
-    const month = today.getMonth();
-    const day = getDayByIndex(today.getDay());
+    const newDay = new Date();
+    const year = newDay.getFullYear();
+    const month = newDay.getMonth();
+    const day = getDayByIndex(newDay.getDay());
     
     document.getElementById("year").innerHTML = year;
     document.getElementById("month").innerHTML = month;

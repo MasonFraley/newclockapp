@@ -15,11 +15,9 @@ body {
     padding: auto; 
 }
 
-.time {
-    font-size: 60px;
-}
-
-.date {
-    font-size: 60px;
+.calendar {
+    font-size:60px;
+    text-align: center;
+    padding: auto;
 }
 
