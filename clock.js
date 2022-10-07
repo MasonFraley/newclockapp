@@ -7,8 +7,8 @@ function clock() {
     const ampm = document.getElementById("ampm");
 
     document.getElementById("hours").innerHTML = leadingZeroHour();
-    document.getElementById("minutes").innerHTML = leadingZeroMin()
-    document.getElementById("seconds").innerHTML = leadingZeroSec()
+    document.getElementById("minutes").innerHTML = leadingZeroMin();
+    document.getElementById("seconds").innerHTML = leadingZeroSec();
     
     function leadingZeroSec() {
         return("0" + seconds).slice(-2)
@@ -43,7 +43,10 @@ function calendarDate() {
     document.getElementById("day").innerHTML = day;
 }
 
+setInterval(clock, 10);
 clock();
+
+
 
 
 
