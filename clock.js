@@ -55,26 +55,14 @@ function calendarDate() {
 
     var suffix;
 
-    if (day == 1) {
+    if (day == 1 || day == 21 || day == 31) {
         suffix = "st"
-    }
-    if (day == 2) {
+    }    
+    if (day == 2 || day == 22) {
         suffix = "nd"
     }
-    if (day == 3) {
+    if (day == 3 || day == 23) {
         suffix = "rd"
-    } 
-    if (day == 21) {
-        suffix = "st"
-    }
-    if (day == 22) {
-        suffix = "nd"
-    }
-    if (day == 23) {
-        suffix = "rd"
-    }
-    if (day == 31) {
-        suffix = "st"
     } else {
         suffix = "th"
     }
