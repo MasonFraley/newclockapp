@@ -45,7 +45,7 @@ function calendarDate() {
     
     const monthName = ["January","February","March","April","May","June","July","August","September","October","November","December"];
 
-    const weekday2 = weekday[newDay.getDate()];
+    const weekday2 = weekday[newDay.getDay()];
     const monthName2 = monthName[newDay.getMonth()];
     
     document.getElementById("year").innerHTML = year;
