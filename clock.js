@@ -39,13 +39,13 @@ function calendarDate() {
     const newDay = new Date();
     const year = newDay.getFullYear();
     const month = newDay.getMonth();
-    const day = newDay.getDay();
+    const day = newDay.getDate();
     
     const weekday = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
     
     const monthName = ["January","February","March","April","May","June","July","August","September","October","November","December"];
 
-    const weekday2 = weekday[newDay.getDay()];
+    const weekday2 = weekday[newDay.getDate()];
     const monthName2 = monthName[newDay.getMonth()];
     
     document.getElementById("year").innerHTML = year;
@@ -58,10 +58,10 @@ function calendarDate() {
     if (day == 1 || day == 21 || day == 31) {
         suffix = "st"
     }    
-    if (day == 2 || day == 22) {
+    else if (day == 2 || day == 22) {
         suffix = "nd"
     }
-    if (day == 3 || day == 23) {
+    else if (day == 3 || day == 23) {
         suffix = "rd"
     } else {
         suffix = "th"
